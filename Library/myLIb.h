@@ -1,4 +1,19 @@
- //Bubble Sort
+//Sum of elements in array
+#include <stdio.h>
+
+int sum(int *arr, size_t size)
+{
+    int sum = 0;
+    for (int i = 0; i < size; i++)
+    {
+        sum += *(arr + i);
+    }
+    return sum;
+}
+
+
+
+//Bubble Sort
  void bubble_sort (int *arr, int size, int i)
  {
     for (int j = 0; j < i; j++)
@@ -14,6 +29,8 @@
         }
     }
  }
+
+
 
 //Towers of Hanoi
 void hanoi(int n, char from, char to, char help)
