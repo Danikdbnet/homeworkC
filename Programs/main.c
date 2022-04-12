@@ -30,5 +30,38 @@ int main(int argc, const char * argv[]) {
 }
 
 
+int main()
+{
+    int  numbers = 0;
+    char znak;
+    int  CountOfNumbers = 0;
+    char array[100000];
+     
+    while ((znak = getchar()) && (znak != '\n'))
+    {
+        {
+            array[numbers] = znak;
+            numbers++;
+            
+            if (('0' <= znak) && (znak <= '9'))
+                CountOfNumbers++;
+        }
+    }
+    
+    char text[numbers];
+    
+    for(int i = 0; i < numbers; i++)
+        text[i] = array[i];
+    
+    
+    for(int i = 0; i < numbers; i++)
+        printf("%c", text[i]);
+        
+    printf("\nNumbers contained: %d\n", CountOfNumbers);
+    return 0;
+}
+
+
+
 
 
